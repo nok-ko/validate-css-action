@@ -1,12 +1,13 @@
-import {validateFile, reporters} from 'csstree-validator';
-import { getInput } from '@actions/core';
+import { validateFile, reporters } from 'csstree-validator';
+import core from '@actions/core';
+import '@actions/github';
 import path from 'node:path';
-import {readFile, opendir} from 'node:fs/promises';
+import { opendir } from 'node:fs/promises';
 
 try {
   // Only validate files with .css extension. Hardcoded and bad.
   const ext = 'css';
-  const directoryName = getInput('directory');
+  const directoryName = core.getInput('directory');
   const directory = await opendir(directoryName);
   const errors = [];
 

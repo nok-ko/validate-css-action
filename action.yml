@@ -7,4 +7,4 @@ inputs:
     default: 'World'
 runs:
   using: 'node16'
-  main: 'index.mjs'
+  main: 'dist/index.mjs'

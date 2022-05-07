@@ -1,0 +1,10 @@
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  directory:  # id of input
+    description: 'Directory containing CSS Files'
+    required: true
+    default: 'World'
+runs:
+  using: 'node16'
+  main: 'index.mjs'

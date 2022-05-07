@@ -1,5 +1,4 @@
 import {validateFile, reporters} from 'csstree-validator';
-// const validator = require('css-validator');
 import core from '@actions/core';
 import github from '@actions/github';
 import path from 'node:path';

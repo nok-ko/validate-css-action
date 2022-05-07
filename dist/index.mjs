@@ -10164,7 +10164,6 @@ __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependen
 /* harmony import */ var node_path__WEBPACK_IMPORTED_MODULE_3__ = __nccwpck_require__(9411);
 /* harmony import */ var node_fs_promises__WEBPACK_IMPORTED_MODULE_4__ = __nccwpck_require__(3977);
 
-// const validator = require('css-validator');
 
 
 
@@ -10173,8 +10172,9 @@ __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependen
 try {
   // Only validate files with .css extension. Hardcoded and bad.
   const ext = 'css';
-  const directoryName = _actions_core__WEBPACK_IMPORTED_MODULE_1__.getInput('directory');
-  const directory = await (0,node_fs_promises__WEBPACK_IMPORTED_MODULE_4__.opendir)(directoryName);
+  // const directoryName = core.getInput('directory');
+  const directoryName = 'test';
+  const directory = await (0,node_fs_promises__WEBPACK_IMPORTED_MODULE_4__.opendir)('test');
   const errors = [];
 
   for await (let fPath of directory) {

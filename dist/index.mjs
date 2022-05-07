@@ -2643,12 +2643,6 @@ __nccwpck_require__.d(index_parse_namespaceObject, {
 
 ;// CONCATENATED MODULE: external "module"
 const external_module_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("module");
-;// CONCATENATED MODULE: ./node_modules/csstree-validator/lib/version.js
-
-
-const version_require = (0,external_module_namespaceObject.createRequire)("file:///Users/nokko/code/validate-css-action/node_modules/csstree-validator/lib/version.js");
-
-const { version } = version_require('../package.json');
 
 // EXTERNAL MODULE: external "fs"
 var external_fs_ = __nccwpck_require__(147);
@@ -12887,12 +12881,7 @@ const nth = {
     ...walker
 }));
 
-;// CONCATENATED MODULE: ./node_modules/css-tree/lib/version.js
 
-
-const lib_version_require = (0,external_module_namespaceObject.createRequire)("file:///Users/nokko/code/validate-css-action/node_modules/css-tree/lib/version.js");
-
-const { version: version_version } = lib_version_require('../package.json');
 
 ;// CONCATENATED MODULE: ./node_modules/css-tree/lib/utils/clone.js
 

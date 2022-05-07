@@ -9716,22 +9716,11 @@ function createSyntax(config) {
 
 /* harmony default export */ const create = (config => createSyntax(config_mix({}, config)));
 
-;// CONCATENATED MODULE: ./node_modules/css-tree/lib/data-patch.js
-
-
-const data_patch_require = (0,external_module_namespaceObject.createRequire)("file:///Users/nokko/code/validate-css-action/node_modules/css-tree/lib/data-patch.js");
-const patch = data_patch_require('../data/patch.json');
-
-/* harmony default export */ const data_patch = (patch);
-
 ;// CONCATENATED MODULE: ./node_modules/css-tree/lib/data.js
 
 
 
 const data_require = (0,external_module_namespaceObject.createRequire)("file:///Users/nokko/code/validate-css-action/node_modules/css-tree/lib/data.js");
-const mdnAtrules = data_require('mdn-data/css/at-rules.json');
-const mdnProperties = data_require('mdn-data/css/properties.json');
-const mdnSyntaxes = data_require('mdn-data/css/syntaxes.json');
 
 const extendSyntax = /^\s*\|\s*/;
 

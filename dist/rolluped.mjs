@@ -2200,5 +2200,5 @@ try {
   }
 } catch (errors) {
   coreExports.error(errors);
-  coreExports.setFailed(errors.map(err => index.console(err)));
+  coreExports.setFailed(errors.map(err => index.console(err)).join());
 }

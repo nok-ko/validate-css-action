@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "node node_modules/@vercel/ncc/dist/ncc/cli.js build index.mjs"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -20,12 +20,12 @@
   "dependencies": {
     "@actions/core": "^1.8.0",
     "@actions/github": "^5.0.1",
-    "@vercel/ncc": "^0.33.4",
-    "@zeit/ncc": "^0.22.3",
     "csstree-validator": "^3.0.0",
-    "rollup": "^2.72.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^13.3.0"
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "rollup": "^2.72.0"
   }
 }

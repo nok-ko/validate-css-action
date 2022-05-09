@@ -1,4 +1,4 @@
-import {validateFile, reporters} from 'csstree-validator';
+import {validateFile, reporters} from './node_modules/csstree-validator/dist/csstree-validator.mjs';
 import {getInput, setFailed} from '@actions/core';
 import path from 'node:path';
 import {readFile, opendir} from 'node:fs/promises';

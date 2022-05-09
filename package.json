@@ -2,7 +2,7 @@
   "name": "validate-css-action",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/rolluped.js",
+  "main": "dist/rolluped.mjs",
   "scripts": {
     "build": "rollup -c"
   },

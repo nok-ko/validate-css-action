@@ -5,9 +5,10 @@ import commonjs from '@rollup/plugin-commonjs';
 export default {
   input: 'index.mjs',
   output: {
-    // dir: 'output',
-    file: 'dist/rolluped.js',
+    file: 'dist/rolluped.mjs',
     format: 'es'
   },
-  plugins: [nodeResolve(), json(), commonjs()]
+  plugins: [nodeResolve({
+    extensions: [ '.js', '.json' ],
+  }), commonjs(), json()]
 };

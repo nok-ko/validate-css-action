@@ -1964,7 +1964,7 @@ try {
     throw errors;
   }
 } catch (errors) {
-  core.setFailed(errors);
+  (0,_actions_core__WEBPACK_IMPORTED_MODULE_1__.setFailed)(errors);
 }
 
 __webpack_handle_async_dependencies__();
@@ -2643,6 +2643,12 @@ __nccwpck_require__.d(index_parse_namespaceObject, {
 
 ;// CONCATENATED MODULE: external "module"
 const external_module_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("module");
+;// CONCATENATED MODULE: ./node_modules/csstree-validator/lib/version.js
+
+
+const version_require = (0,external_module_namespaceObject.createRequire)("file:///Users/nokko/code/validate-css-action/node_modules/csstree-validator/lib/version.js");
+
+const { version } = version_require('../package.json');
 
 // EXTERNAL MODULE: external "fs"
 var external_fs_ = __nccwpck_require__(147);
@@ -9716,11 +9722,22 @@ function createSyntax(config) {
 
 /* harmony default export */ const create = (config => createSyntax(config_mix({}, config)));
 
+;// CONCATENATED MODULE: ./node_modules/css-tree/lib/data-patch.js
+
+
+const data_patch_require = (0,external_module_namespaceObject.createRequire)("file:///Users/nokko/code/validate-css-action/node_modules/css-tree/lib/data-patch.js");
+const patch = data_patch_require('../data/patch.json');
+
+/* harmony default export */ const data_patch = (patch);
+
 ;// CONCATENATED MODULE: ./node_modules/css-tree/lib/data.js
 
 
 
 const data_require = (0,external_module_namespaceObject.createRequire)("file:///Users/nokko/code/validate-css-action/node_modules/css-tree/lib/data.js");
+const mdnAtrules = data_require('mdn-data/css/at-rules.json');
+const mdnProperties = data_require('mdn-data/css/properties.json');
+const mdnSyntaxes = data_require('mdn-data/css/syntaxes.json');
 
 const extendSyntax = /^\s*\|\s*/;
 
@@ -12870,7 +12887,12 @@ const nth = {
     ...walker
 }));
 
+;// CONCATENATED MODULE: ./node_modules/css-tree/lib/version.js
 
+
+const lib_version_require = (0,external_module_namespaceObject.createRequire)("file:///Users/nokko/code/validate-css-action/node_modules/css-tree/lib/version.js");
+
+const { version: version_version } = "2.1.0";
 
 ;// CONCATENATED MODULE: ./node_modules/css-tree/lib/utils/clone.js
 

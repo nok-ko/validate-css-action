@@ -1,5 +1,5 @@
 import {validateFile, reporters} from 'csstree-validator';
-import { getInput } from '@actions/core';
+import { setFailed, getInput } from '@actions/core';
 import path from 'node:path';
 import {readFile, opendir} from 'node:fs/promises';
 
@@ -25,5 +25,5 @@ try {
     throw errors;
   }
 } catch (errors) {
-  core.setFailed(errors);
+  setFailed(errors);
 }

@@ -27,5 +27,6 @@ try {
     throw errors;
   }
 } catch (errors) {
+  console.error(...errors)
   setFailed(errors.map(err => reporters.console(err)));
 }

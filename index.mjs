@@ -15,9 +15,9 @@ try {
       continue;
     const longPath = process.cwd() + path.sep + directoryName + path.sep + fPath.name;
     const latestErrors = validateFile(longPath);
-    if (latestErrors[longPath].length) {
-      console.log(reporters.console(latestErrors));
-    }
+    // if (latestErrors[longPath].length) {
+    //   // console.log(reporters.console(latestErrors));
+    // // }
     errors.push(validateFile(fPath));
   }
 
@@ -25,5 +25,5 @@ try {
     throw errors;
   }
 } catch (errors) {
-  setFailed(errors);
+  setFailed(reporters.console(errors));
 }

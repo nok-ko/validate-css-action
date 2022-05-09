@@ -2191,14 +2191,14 @@ try {
     const latestErrors = validateFile(longPath);
     if (latestErrors[longPath].length) {
       coreExports.info(index.console(latestErrors));
+      errors.push(latestErrors);
     }
-    errors.push(latestErrors);
   }
 
   if (errors.length > 0) {
     throw errors;
   }
 } catch (errors) {
-  coreExports.error(errors);
-  coreExports.setFailed(errors.map(err => index.console(err)).join());
+  coreExports.error(errors.map(err => index.console(err)).join());
+  coreExports.setFailed("Errors detected in supplied CSS files, see log for details.");
 }

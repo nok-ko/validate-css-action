@@ -19,14 +19,14 @@ try {
     const latestErrors = validateFile(longPath);
     if (latestErrors[longPath].length) {
       info(reporters.console(latestErrors));
+      errors.push(latestErrors);
     }
-    errors.push(latestErrors);
   }
 
   if (errors.length > 0) {
     throw errors;
   }
 } catch (errors) {
-  error(errors)
-  setFailed(errors.map(err => reporters.console(err)).join());
+  error(errors.map(err => reporters.console(err)).join());
+  setFailed("Errors detected in supplied CSS files, see log for details.");
 }

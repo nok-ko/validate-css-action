@@ -28,5 +28,5 @@ try {
   }
 } catch (errors) {
   error(errors)
-  setFailed(errors.map(err => reporters.console(err)));
+  setFailed(errors.map(err => reporters.console(err)).join());
 }

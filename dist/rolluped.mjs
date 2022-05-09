@@ -2178,8 +2178,9 @@ var coreExports = requireCore();
 try {
   // Only validate files with .css extension. Hardcoded and bad.
   const ext = 'css';
-  const directoryName = 'test';
-  // const directoryName = getInput('directory');
+  // const directoryName = 'test';
+  const directoryName = coreExports.getInput('directory');
+  console.log(`Directory input: ${directoryName}`);
   const directory = await opendir(directoryName);
   const errors = [];
 
@@ -2188,9 +2189,9 @@ try {
       continue;
     const longPath = process.cwd() + path.sep + directoryName + path.sep + fPath.name;
     const latestErrors = validateFile(longPath);
-    // if (latestErrors[longPath].length) {
-    //   // console.log(reporters.console(latestErrors));
-    // // }
+    if (latestErrors[longPath].length) {
+      console.log(index.console(latestErrors));
+    }
     errors.push(latestErrors);
   }
 
@@ -2198,6 +2199,5 @@ try {
     throw errors;
   }
 } catch (errors) {
-  console.log(errors);
   coreExports.setFailed(errors.map(err => index.console(err)));
 }

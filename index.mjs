@@ -6,7 +6,8 @@ import {readFile, opendir} from 'node:fs/promises';
 try {
   // Only validate files with .css extension. Hardcoded and bad.
   const ext = 'css';
-  const directoryName = getInput('directory');
+  const directoryName = 'test';
+  // const directoryName = getInput('directory');
   const directory = await opendir(directoryName);
   const errors = [];
 
@@ -18,12 +19,12 @@ try {
     // if (latestErrors[longPath].length) {
     //   // console.log(reporters.console(latestErrors));
     // // }
-    errors.push(validateFile(fPath));
+    errors.push(latestErrors);
   }
 
   if (errors.length > 0) {
     throw errors;
   }
 } catch (errors) {
-  setFailed(reporters.console(errors));
+  setFailed(errors.map(err => reporters.console(err)));
 }

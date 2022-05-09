@@ -2,7 +2,7 @@
   "name": "validate-css-action",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/rolluped.js",
   "scripts": {
     "build": "rollup -c"
   },
@@ -20,7 +20,7 @@
   "dependencies": {
     "@actions/core": "^1.8.0",
     "@actions/github": "^5.0.1",
-    "csstree-validator": "^3.0.0",
+    "csstree-validator": "^3.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.3.0",

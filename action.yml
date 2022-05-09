@@ -1,5 +1,5 @@
-name: 'Hello World'
-description: ''
+name: 'Validate CSS with csstree-validator'
+description: 'Uses the csstree-validator package to validate css files in a given directory.'
 inputs:
   directory:  # id of input
     description: 'Directory containing CSS Files'

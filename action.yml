@@ -7,4 +7,4 @@ inputs:
     default: 'public/css'
 runs:
   using: 'node16'
-  main: 'dist/rolluped.js'
+  main: 'dist/rolluped.mjs'

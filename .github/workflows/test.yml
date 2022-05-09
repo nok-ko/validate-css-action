@@ -1,0 +1,14 @@
+name: Sanity-check Test
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2 # Required with all actions
+    - name: Validates CSS
+      uses: nok-ko/validate-css-action@main
+      with:
+        directory: public/css

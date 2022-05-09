@@ -8,6 +8,7 @@ try {
   const ext = 'css';
   // const directoryName = 'test';
   const directoryName = getInput('directory');
+  console.log(`Directory input: ${directoryName}`)
   const directory = await opendir(directoryName);
   const errors = [];
 
@@ -16,9 +17,9 @@ try {
       continue;
     const longPath = process.cwd() + path.sep + directoryName + path.sep + fPath.name;
     const latestErrors = validateFile(longPath);
-    // if (latestErrors[longPath].length) {
-    //   // console.log(reporters.console(latestErrors));
-    // // }
+    if (latestErrors[longPath].length) {
+      console.log(reporters.console(latestErrors));
+    }
     errors.push(latestErrors);
   }
 

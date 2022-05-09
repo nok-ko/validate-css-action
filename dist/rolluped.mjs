@@ -2180,7 +2180,7 @@ try {
   const ext = 'css';
   // const directoryName = 'test';
   const directoryName = coreExports.getInput('directory');
-  console.log(`Directory input: ${directoryName}`);
+  coreExports.info(`Directory input: ${directoryName}`);
   const directory = await opendir(directoryName);
   const errors = [];
 
@@ -2190,7 +2190,7 @@ try {
     const longPath = process.cwd() + path.sep + directoryName + path.sep + fPath.name;
     const latestErrors = validateFile(longPath);
     if (latestErrors[longPath].length) {
-      console.log(index.console(latestErrors));
+      coreExports.info(index.console(latestErrors));
     }
     errors.push(latestErrors);
   }
@@ -2199,5 +2199,6 @@ try {
     throw errors;
   }
 } catch (errors) {
+  coreExports.error(...errors);
   coreExports.setFailed(errors.map(err => index.console(err)));
 }

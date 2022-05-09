@@ -1,14 +1,14 @@
 import {validateFile, reporters} from './node_modules/csstree-validator/dist/csstree-validator.mjs';
-import {getInput, setFailed} from '@actions/core';
+import {getInput, setFailed, info, error} from '@actions/core';
 import path from 'node:path';
-import {readFile, opendir} from 'node:fs/promises';
+import {opendir} from 'node:fs/promises';
 
 try {
   // Only validate files with .css extension. Hardcoded and bad.
   const ext = 'css';
   // const directoryName = 'test';
   const directoryName = getInput('directory');
-  console.log(`Directory input: ${directoryName}`)
+  info(`Directory input: ${directoryName}`)
   const directory = await opendir(directoryName);
   const errors = [];
 
@@ -18,7 +18,7 @@ try {
     const longPath = process.cwd() + path.sep + directoryName + path.sep + fPath.name;
     const latestErrors = validateFile(longPath);
     if (latestErrors[longPath].length) {
-      console.log(reporters.console(latestErrors));
+      info(reporters.console(latestErrors));
     }
     errors.push(latestErrors);
   }
@@ -27,6 +27,6 @@ try {
     throw errors;
   }
 } catch (errors) {
-  console.error(...errors)
+  error(...errors)
   setFailed(errors.map(err => reporters.console(err)));
 }
